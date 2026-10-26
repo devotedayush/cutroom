@@ -1,0 +1,20 @@
+Cutroom runtime dependency notices
+
+Cutroom's original application files are MIT licensed. Third-party source remains under its own license.
+
+Mediabunny 1.62.1 — Mozilla Public License 2.0
+Copyright Vanilagy and contributors. Unmodified package sources are available at:
+https://registry.npmjs.org/mediabunny/-/mediabunny-1.62.1.tgz
+License: mediabunny-MPL-2.0.txt
+
+React and React DOM 19.3.1 — MIT
+Copyright Meta Platforms, Inc. and affiliates.
+Sources: https://github.com/facebook/react
+Licenses: react-MIT.txt and react-dom-MIT.txt
+
+Lucide React 0.468.0 — ISC, with Feather portions under MIT
+Copyright Lucide Contributors and Cole Bemis.
+Sources: https://github.com/lucide-icons/lucide
+License: lucide-ISC.txt
+
+The Devpost Learn Skill Pack's MIT notice is included in .agents/skills/DEVPOST-LEARN-LICENSE in the source repository. EditDatVid and Remotion Studio are references only; their source, assets and brands are not included in this application.

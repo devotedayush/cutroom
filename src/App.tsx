@@ -320,22 +320,24 @@ export default function App() {
     else element.pause();
   }, [time, playing, current?.id, point?.clip.id, point?.clip.volume]);
   useEffect(() => {
-    let frame: number;
-    function paint() {
+    let frame = 0;
+    const source = current?.kind === "video" ? video.current : image.current;
+    function draw() {
       const c = canvas.current,
-        source = current?.kind === "video" ? video.current : image.current;
-      if (c && source && point && current) {
+        activeSource = source;
+      if (c && activeSource && point && current) {
         const ctx = c.getContext("2d");
         if (
           ctx &&
-          ((source instanceof HTMLVideoElement && source.readyState >= 2) ||
-            (source instanceof HTMLImageElement &&
-              source.complete &&
-              source.naturalWidth))
+          ((activeSource instanceof HTMLVideoElement &&
+            activeSource.readyState >= 2) ||
+            (activeSource instanceof HTMLImageElement &&
+              activeSource.complete &&
+              activeSource.naturalWidth))
         ) {
           drawComposition(
             ctx,
-            source,
+            activeSource,
             current.width,
             current.height,
             point.clip,
@@ -344,11 +346,24 @@ export default function App() {
           );
         }
       }
+    }
+    function paint() {
+      draw();
       frame = requestAnimationFrame(paint);
     }
-    frame = requestAnimationFrame(paint);
-    return () => cancelAnimationFrame(frame);
-  }, [current, point?.clip, project.ratio]);
+    // A paused preview only needs repainting when its source frame or properties change.
+    source?.addEventListener("loadeddata", draw);
+    source?.addEventListener("seeked", draw);
+    source?.addEventListener("load", draw);
+    if (playing) frame = requestAnimationFrame(paint);
+    else draw();
+    return () => {
+      cancelAnimationFrame(frame);
+      source?.removeEventListener("loadeddata", draw);
+      source?.removeEventListener("seeked", draw);
+      source?.removeEventListener("load", draw);
+    };
+  }, [current, point?.clip, project.ratio, playing, playing ? 0 : time]);
   useEffect(() => {
     function key(e: KeyboardEvent) {
       if (
@@ -1041,11 +1056,12 @@ export default function App() {
             <span className="divider" />
             <button
               className="tool-button"
+              title="Split the clip under the playhead"
               disabled={!point || time <= 0 || time >= duration}
               onClick={() => commit(splitClip(project, time))}
             >
               <Scissors size={15} />
-              Split
+              Split at playhead
             </button>
             <button
               className="icon-button"

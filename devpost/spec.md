@@ -2,10 +2,10 @@
 doc: spec
 status: approved
 ---
-# Video editor — Technical Spec
+# Cutroom — Technical Spec
 
 ## How This Works, In Plain Language
-Proposed: the browser opens local files and remembers the edit decisions. The preview draws the selected source section and title. Export decodes the chosen sections, draws the same composition, encodes frames and audio, and downloads a movie. No media-processing server is involved.
+The browser opens local files and remembers the edit decisions. The preview draws the selected source section and title. Export decodes the chosen sections, draws the same composition, encodes frames and audio, and downloads a movie. No media-processing server is involved.
 
 ## The Core Journey Through the System
 Implements `prd.md > The Core Journey`: local File → asset metadata/object URL → ordered Clip records → shared composition renderer → preview or encoder → downloaded video Blob.
@@ -19,10 +19,10 @@ Recommended React + TypeScript + Vite for a static app. Mediabunny for local dec
 - https://developer.mozilla.org/en-US/docs/Web/API/WebCodecs_API
 
 ## Where It Runs and How Someone Tries It
-Current desktop Chrome recommended. Node 20+ for development. `npm install`, `npm run dev -- --host 127.0.0.1`, open printed localhost URL. `npm run build` creates static dist. No API keys. Public repository and short public video are required for submission; deployment optional.
+Current desktop Chrome recommended. Node 20+ for development. `npm install`, `npm run dev -- --host 127.0.0.1`, open printed localhost URL. `npm run build` creates static dist. No API keys. Public repository and short public video are required for submission. The learner explicitly chose localhost running and no hosted deployment.
 
 ## Look and Feel
-Carries proposed `prd.md > Look and Feel`: CSS custom properties, charcoal workbench, lime active controls, accessible focus rings and responsive panel stacking.
+Carries approved `prd.md > Look and Feel`: CSS custom properties, charcoal workbench, lime active controls, accessible focus rings and responsive panel stacking.
 
 ## Components
 ### Editor Workspace
@@ -65,10 +65,10 @@ No runtime external APIs, authentication or paid services. npm supplies build de
 - Long/high-resolution source → bounded PoC output resolution and visible progress/cancel; avoid claiming unlimited performance.
 
 ## What Was Simplified and Why
-Single sequence rather than professional multi-track NLE. Local media rather than uploads. Browser-supported formats rather than silently promising every codec. These are proposed boundaries, pending review.
+Single sequence rather than professional multi-track NLE. Local media rather than uploads. Browser-supported formats rather than silently promising every codec. These are the approved proof-of-concept boundaries.
 
 ## Decisions and Open Issues
-Learner chose the reference and requested parallel GPT-6.1 Sol implementation. Stack is an agent recommendation, not yet an attributed learner choice. Genuine engineering uncertainty: exact browser export/audio capabilities; investigate before relying on them. No learner-specific technical uncertainty has been established.
+Learner chose the reference and requested parallel GPT-6.1 Sol implementation. Stack follows the approved implementation plan. The browser codec uncertainty was investigated early, then verified through actual WebM/MP4 exports, output frames and decoded audio. No learner-specific technical uncertainty has been established.
 
 ## Approval Record
 Learner replied “looks good” to the displayed workflow, visual direction and build proposal on 26 October 2026. Proceed in fast mode as requested. Technical implementation details are engineering choices within that approved boundary.

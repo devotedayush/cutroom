@@ -2,29 +2,29 @@
 doc: scope
 status: approved
 ---
-# Video editor proof of concept
-An original browser-local editor inspired by EditDatVid. “Cutroom” is a temporary internal folder/codename; final submission identity belongs to the learner.
+# Cutroom
+An original browser-local editor inspired by EditDatVid and Remotion Studio. The learner accepted Cutroom as the project name.
 
 ## The Unique Kernel
-Proposed: a focused short-demo editing workspace that turns local clips into a finished, titled video without sending the media to a server. Prove the whole journey with a playable exported file.
+A private, browser-native video editor. The learner’s central promise is “Your media never leaves your machine.” The proof is local import, editing and a playable offline export.
 
 ## Who It's For
-Proposed audience: builders and creators assembling a short product/demo video from screen recordings and clips.
+Audience in the approved scope: builders and creators assembling a short product/demo video from screen recordings and clips.
 
 ## The Core Loop
 Open a sample project or import local video → choose useful sections → reorder clips → add titles → preview → export a real video.
 
 ## Inspiration & Identity
-User-selected reference: https://github.com/cneuralnetwork/editdatvid. Inspect its public description as inspiration; do not reuse source or assets. Proposed design: dark, focused editing workspace, restrained lime accent, media bin, preview, inspector and timeline.
+User-selected reference: https://github.com/cneuralnetwork/editdatvid. Inspect its public description as inspiration; do not reuse source or assets. Approved design: dark, focused editing workspace, restrained lime accent, media bin, preview, inspector and timeline.
 
 ## Why This Matters to the Learner
-The learner wants to build a similar tool and enter Build With AI Basics.
+The learner wants to build a similar tool and enter Build With AI Basics. The learner subsequently requested localhost-only running; hosted deployment is omitted.
 
 ## What "Working" Looks Like
 Import two local clips, trim them, put them in a chosen order, add a title and download a playable movie containing those exact decisions. Include a labeled sample project so the loop is immediately testable.
 
 ## The POC Boundary
-Proposed: single linear video sequence; video/image import; trim, split, reorder, remove, undo/redo; title overlay per clip; output ratio; local save/open; preview and browser video export. No required server or API keys.
+Approved: single linear video sequence; video/image import; trim, split, reorder, remove, undo/redo; title overlay per clip; output ratio; local save/open; preview and browser video export. No required server or API keys.
 
 ## Later
 Advanced multi-track mixing, automatic transcription, transitions, keyframes, professional color grading, collaboration.
@@ -33,7 +33,7 @@ Advanced multi-track mixing, automatic transcription, transitions, keyframes, pr
 Reusing the existing reference code: new-project requirement. A full professional NLE: too large for this proof. Cloud rendering/accounts: unnecessary to the core local-editing proof.
 
 ## Review Status
-Draft supplied for learner review; do not infer approval from silence. Product details above are agent recommendations rather than established learner choices.
+The learner approved the displayed direction with “looks good,” clarified the privacy kernel, and delegated manual review to Luna.
 
 ## Approval Record
 Learner replied “looks good” to the displayed workflow, visual direction and build proposal on 26 October 2026. Proceed in fast mode as requested. Technical implementation details are engineering choices within that approved boundary.

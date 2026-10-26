@@ -2,8 +2,8 @@
 doc: prd
 status: approved
 ---
-# Video editor — Product Requirements
-Proposed implementation of `scope.md > The Core Loop`; pending learner review.
+# Cutroom — Product Requirements
+Approved implementation of `scope.md > The Core Loop`, with the learner’s later privacy and localhost-only instructions applied.
 
 ## The Core Journey
 1. Arrive in a working editor with a clearly labeled generated sample project.
@@ -17,7 +17,7 @@ Proposed implementation of `scope.md > The Core Loop`; pending learner review.
 One editing workspace. Header: project name, local status, undo/redo, save/open and export. Left: media. Center: preview and transport. Right: selected clip inspector. Bottom: scrollable timeline with ruler and playhead. Smaller windows stack or collapse secondary panels.
 
 ## Look and Feel
-Proposed: warm charcoal, off-white text and acid-lime accent; clean sans-serif UI with monospaced timecodes. Dense but legible editing tool; no external media/font requests required. Reference establishes editing-workspace inspiration; palette is not yet a learner decision.
+Approved direction: warm charcoal, off-white text and acid-lime accent; clean sans-serif UI with monospaced timecodes. Dense but legible editing tool; no external media/font requests required. Reference establishes editing-workspace inspiration; the learner approved the displayed palette and direction.
 
 ## Features and Behavior
 ### Import and Samples
@@ -40,7 +40,7 @@ Save edit decisions as JSON, separate from original media. Explain relinking whe
 - Persistence: local edit decisions only unless explicitly saving media; clearly state reload/relink behavior.
 
 ## Product Decisions
-Confirmed: browser video-editor inspiration and hackathon goal. Remaining scope/layout/behavior are proposed for review.
+Confirmed: original browser video-editor implementation, privacy as the selling point, dark editing workspace, local running, and hackathon submission preparation.
 
 ## What We're Building
 One coherent local editing and export journey as above.
@@ -49,7 +49,7 @@ One coherent local editing and export journey as above.
 Multi-track audio, AI transcription, cloud accounts and publishing integrations.
 
 ## Open Questions
-Learner approval of proposed scope and design. Final project name and learner-authored submission prose remain open. Runtime codec support is an engineering investigation.
+The name is Cutroom. Learner-authored submission prose and a public demonstration video remain open. Current Chrome runtime export was verified in both WebM and MP4; other browsers remain unverified.
 
 ## Approval Record
 Learner replied “looks good” to the displayed workflow, visual direction and build proposal on 26 October 2026. Proceed in fast mode as requested. Technical implementation details are engineering choices within that approved boundary.

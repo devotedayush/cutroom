@@ -35,3 +35,23 @@ Raw trace and media evidence are kept only under ignored artifacts/qa. Trace inc
 A project-reopening test found an asynchronous nested file picker did not open reliably. It was replaced by an explicit persistent relink dialog with a direct user button; re-verification is pending below. An update-cache race during repeated local builds was corrected by allowing new service workers to wait for existing editing tabs to close rather than forcing activation during a live edit.
 
 Tab-scoped offline emulation was restored to online after testing. This does not assert that third-party browser extensions or operating-system components are private.
+
+Project reopening re-verification passed in a fresh production session: explicit relink dialog listed all three original files; direct file selection restored the four clips,5s duration,9:16 ratio,titles,source trims and muted volume; undo/redo were cleared as intended.
+
+Luna's independent browser pass found an empty page on a previously rebuilt local origin. The app-shell fetch handler was corrected to read its own versioned cache and ignore the static server's Vary:Origin header for known shipped assets. New workers wait for existing editing tabs to close. Fresh-origin and update verification is in progress; this issue is not counted as a passed check.
+
+The learner explicitly requested localhost-only running. Hosted deployment is omitted. Public GitHub source publication was separately authorized.
+
+Two service-worker regression checks pass: navigation must use the active version's shell even when another cache contains a different version, and known static app assets ignore Vary:Origin while media requests and writes remain outside the cache handler.
+
+## Independent delegated manual browser review
+
+At the learner’s explicit request, Luna independently tested a fresh production-origin Chrome tab. The empty editor and generated demo loaded; title/trim changes, reorder, undo/redo, frame step, playback/seek, aspect ratios and fit worked. Local A/B video and portrait import passed; deliberately corrupt input produced an error. Saved original-media project relinking restored all four clips,5s,9:16 and source settings. Save reported success. A mixed14.59s export reached a native result player and download link; the browser automation’s download event did not provide a path, so that pass does not independently assert decoded downloaded-file correctness. Parent’s separate five-second offline downloads were decoded and inspected as described above.
+
+The separate selection vs playhead controls caused uncertainty; the split action was clarified as Split at playhead. Fresh corrected production origin rendered normally after the earlier cache issue. A final targeted paused-preview redraw check follows below.
+
+The learner explicitly chose delegated manual review instead of personally trying the app. No personal reflection, learning outcome, video narration, or submission answers were manufactured.
+
+Final targeted Luna pass on the current localhost development build passed: paused-title edit repainted immediately; Next frame changed the visible source and counter0→1; Play/Pause advanced then stopped; the clarified Split at playhead label was present. Screenshot: ignored artifacts/qa/luna-final-workspace.jpg.
+
+Final command checks passed: npm test(10), npm run build, npm run test:offline(2). Browser verification is scoped to desktop Chrome; Firefox/Safari, very long/high-resolution sources, and all possible codecs are not claimed tested.

@@ -7,10 +7,10 @@ This is a technical checklist, not submission copy.
 - [x] Approved scope, PRD, spec and build checklist saved.
 - [x] Working browser edit → video export demonstrated in local verification.
 - [x] MIT license and setup instructions provided.
-- [ ] Entrant hands-on review and final confirmation.
-- [ ] Entrant-chosen final project name.
+- [x] Entrant-requested delegated manual review by Luna; personal review is not claimed.
+- [x] Entrant accepted Cutroom as the name.
 - [ ] Entrant-written description, required form answers and exit survey.
-- [ ] Public GitHub/GitLab/Bitbucket source URL; publication must be authorized.
+- [ ] Public GitHub source push and anonymous verification — authorized repository: https://github.com/devotedayush/cutroom
 - [ ] Public YouTube/Vimeo working demonstration under three minutes.
 - [ ] Final Devpost submission, authorized and verified.
 

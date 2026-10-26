@@ -1,13 +1,13 @@
-# Cutroom (working title)
+# Cutroom
 
-A browser-local video editing proof of concept: import video or images, trim and arrange clips, add titles, preview and export a movie. The working title can be changed before submission.
+A browser-local video editing proof of concept: import video or images, trim and arrange clips, add titles, preview and export a movie.
 
 ## Run
 
 Requires Node.js 20.19+ or 22.12+ and a current desktop Chrome browser.
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
@@ -16,6 +16,7 @@ Open the local URL printed by Vite (normally http://127.0.0.1:5178). No API keys
 ```sh
 npm test
 npm run build
+npm run test:offline
 npm run preview
 ```
 
@@ -49,3 +50,5 @@ Planning and build workflow: [Devpost Learn Skill Pack](https://github.com/chall
 ## License
 
 MIT. Dependency licenses remain with their respective owners. Devpost submission copy and reflections must be written by the entrant.
+
+Runtime license notices and source availability are included under [`public/licenses/`](public/licenses/NOTICE.txt), including Mediabunny's MPL-2.0 notice.
