@@ -2,6 +2,10 @@
 
 A browser-local video editing proof of concept: import video or images, trim and arrange clips, add titles, preview and export a movie.
 
+## Demo
+
+[Watch the 60-second demonstration](https://youtu.be/WUMLKrP4yd4) · [Devpost project](https://devpost.com/software/cutroom-mntc70)
+
 ## Run
 
 Requires Node.js 20.19+ or 22.12+ and a current desktop Chrome browser.
