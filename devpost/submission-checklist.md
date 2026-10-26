@@ -10,7 +10,7 @@ This is a technical checklist, not submission copy.
 - [x] Entrant-requested delegated manual review by Luna; personal review is not claimed.
 - [x] Entrant accepted Cutroom as the name.
 - [ ] Entrant-written description, required form answers and exit survey.
-- [ ] Public GitHub source push and anonymous verification — authorized repository: https://github.com/devotedayush/cutroom
+- [x] Public GitHub source pushed and verified anonymously: https://github.com/devotedayush/cutroom
 - [ ] Public YouTube/Vimeo working demonstration under three minutes.
 - [ ] Final Devpost submission, authorized and verified.
 
